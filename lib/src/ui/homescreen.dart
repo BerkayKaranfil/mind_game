@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icony/icony_gameicons.dart';
 import 'package:icony/icony_ikonate.dart';
+import 'package:mind_game/src/ui/first_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -106,6 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   /* Positioned(
                     child: InkWell(
                       onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => FirstScreen())));
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Math Puzzle")));
                       },
                       splashColor: Colors.green,
@@ -123,7 +125,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ), */
                   Positioned(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => FirstScreen())));
+                      },
                       child: Text(
                         "Math Puzzle",
                         style: GoogleFonts.inter(fontSize: 22),
