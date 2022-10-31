@@ -56,31 +56,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   //IconButton(onPressed: (){}, icon: Ikonate(Ikonate.moon, color: Colors.black, height: 40,)),
-                  ElevatedButton.icon(
+                  ElevatedButton(
                     onPressed: () {},
-                    icon: Ikonate(
+                    child: Ikonate(
                       Ikonate.moon,
                       color: Colors.white,
                       height: 30,
                     ),
-                    label: Text(
-                      "",
-                      style: GoogleFonts.inter(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
-                      ),
-                    ),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
-                        // backgroundColor: Color.fromARGB(255, 233, 89, 89),
                         foregroundColor: Color.fromARGB(255, 211, 197, 155),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                         side: BorderSide(
                             width: 2,
                             color: Color.fromARGB(255, 207, 152, 152))),
-                  )
+                  ),
                 ],
               ),
               SizedBox(
@@ -126,7 +117,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Positioned(
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context) => FirstScreen())));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => FirstScreen())));
                       },
                       child: Text(
                         "Math Puzzle",
