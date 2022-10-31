@@ -59,22 +59,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                     icon: Ikonate(
                       Ikonate.moon,
-                      color: Colors.black,
+                      color: Colors.white,
                       height: 30,
                     ),
                     label: Text(
-                      "Dark",
+                      "",
                       style: GoogleFonts.inter(
                         fontSize: 17,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 233, 89, 89),
+                        backgroundColor: Colors.black,
+                        // backgroundColor: Color.fromARGB(255, 233, 89, 89),
                         foregroundColor: Color.fromARGB(255, 211, 197, 155),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20))),
+                            borderRadius: BorderRadius.circular(20)),
+                        side: BorderSide(
+                            width: 2,
+                            color: Color.fromARGB(255, 207, 152, 152))),
                   )
                 ],
               ),
@@ -99,20 +103,39 @@ class _HomeScreenState extends State<HomeScreen> {
               Stack(
                 children: [
                   SvgPicture.asset("assets/images/gameOne.svg"),
+                  /* Positioned(
+                    child: InkWell(
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Math Puzzle")));
+                      },
+                      splashColor: Colors.green,
+                      child: Container(
+                        height: 88,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 83, 128, 158), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.5), spreadRadius: 1,blurRadius: 10,offset: Offset(0,0))]),
+                            child: Center(child: Text("Math Puzzle", style: GoogleFonts.inter(fontSize: 30, color: Colors.white),)),
+                            
+                      ),
+                    ),
+                    left: 88,
+                    top: 6,
+                  ), */
                   Positioned(
                     child: ElevatedButton(
                       onPressed: () {},
                       child: Text(
                         "Math Puzzle",
+                        style: GoogleFonts.inter(fontSize: 22),
                       ),
                       style:
                           ElevatedButton.styleFrom(minimumSize: Size(177, 90)),
                     ),
                     left: 88,
                     top: 5,
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),
