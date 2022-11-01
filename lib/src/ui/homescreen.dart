@@ -36,7 +36,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 80,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 207, 152, 152),
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 1,
+                            color: Color.fromARGB(255, 207, 152, 152),
+                          ),
+                        ],
+                        border: Border.all(
+                            color: Color.fromARGB(255, 179, 128, 128),
+                            width: 1.5)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
