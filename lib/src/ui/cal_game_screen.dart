@@ -20,8 +20,7 @@ class _CalculateGameState extends State<CalculateGame> {
       appBar: AppBar(
         toolbarHeight: 60,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(10))
-        ),
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(10))),
         backgroundColor: Color.fromARGB(255, 59, 50, 50),
         actions: [
           Row(
@@ -51,6 +50,7 @@ class _CalculateGameState extends State<CalculateGame> {
           ),
         ],
         leadingWidth: 80,
+        centerTitle: true,
         title: Row(
           children: [
             Spacer(),
@@ -66,7 +66,7 @@ class _CalculateGameState extends State<CalculateGame> {
               "0",
               style: GoogleFonts.inter(fontSize: 30, color: Colors.white),
             ),
-            Spacer(),
+            Spacer()
           ],
         ),
         leading: Row(
