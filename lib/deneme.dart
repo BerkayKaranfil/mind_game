@@ -22,10 +22,13 @@ class _denemeState extends State<deneme> {
             child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: GridView(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  padding: EdgeInsets.all(5),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
                       mainAxisExtent: 80,
-                      childAspectRatio: 1 / 1,
+                      childAspectRatio: 1,
                       crossAxisSpacing: 15,
                       mainAxisSpacing: 15),
                   children: [
@@ -233,8 +236,6 @@ class _denemeState extends State<deneme> {
                                 color: Color.fromARGB(255, 44, 27, 27))
                           ]),
                     ),
-                    
-                    
                   ],
                 )
 

@@ -6,6 +6,7 @@ import 'package:icony/icony_ikonate.dart';
 import 'package:mind_game/deneme.dart';
 import 'package:mind_game/src/widgets/first_screen_widgets/navi_pop_button.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/confirmation_button.dart';
+import 'package:mind_game/src/widgets/second_screen_widgets/game_over_alert.dart';
 
 class CalculateGame extends StatefulWidget {
   const CalculateGame({super.key});
@@ -19,6 +20,7 @@ class _CalculateGameState extends State<CalculateGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 228, 182, 182),
+      
       appBar: AppBar(
         toolbarHeight: 60,
         shape: RoundedRectangleBorder(
@@ -131,7 +133,7 @@ class _CalculateGameState extends State<CalculateGame> {
           SizedBox(
             height: 100,
           ),
-          Padding(
+           /* Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Container(
               height: 516,
@@ -167,12 +169,15 @@ class _CalculateGameState extends State<CalculateGame> {
                     );
                   })),
             ),
-          )
+          ),  */
+          GameOverAlertWidget()
         ],
       ),
     );
   }
 }
+
+
 
 
 
