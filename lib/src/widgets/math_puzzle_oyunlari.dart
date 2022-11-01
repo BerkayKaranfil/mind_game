@@ -12,7 +12,7 @@ class MathPuzzleOyunlariWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SvgPicture.asset("assets/images/gameOne.svg"),
+        SvgPicture.asset("assets/images/mathbeyins.svg",),
         /* Positioned(
           child: InkWell(
             onTap: () {
