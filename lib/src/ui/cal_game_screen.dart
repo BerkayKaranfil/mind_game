@@ -137,6 +137,48 @@ class _CalculateGameState extends State<CalculateGame> {
           ),
         ],
       ), */
+      body: Padding(
+        padding: const EdgeInsets.only(right: 20, left: 20),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 80,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(width: 2, color: Colors.grey.shade300)),
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            Container(
+              height: 520,
+              width: 400,
+              child: GridView.builder(
+                  itemCount: 12,
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      mainAxisExtent: 120,
+                      maxCrossAxisExtent: 120,
+                      childAspectRatio: 1),
+                  itemBuilder: ((context, index) {
+                    return Container(
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(20)),
+                    );
+                  })),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
