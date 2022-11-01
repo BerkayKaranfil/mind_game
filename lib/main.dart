@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mind_game/deneme.dart';
 import 'package:mind_game/src/ui/cal_game_screen.dart';
 import 'package:mind_game/src/ui/first_screen.dart';
 import 'package:mind_game/src/ui/homescreen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: deneme(),
     );
   }
 }
