@@ -87,7 +87,9 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
               height: 16,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+              },
               child: Container(
                 height: 60,
                 width: 180,

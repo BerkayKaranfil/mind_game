@@ -9,6 +9,7 @@ import 'package:mind_game/src/widgets/second_screen_widgets/bottom_sheet.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/calculate_gridview.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/confirmation_button.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/game_over_alert.dart';
+import 'package:mind_game/src/widgets/second_screen_widgets/pause_alert.dart';
 
 class CalculateGame extends StatefulWidget {
   const CalculateGame({super.key});
@@ -83,87 +84,93 @@ class _CalculateGameState extends State<CalculateGame> {
           ],
         ),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 7, left: 7),
-            child: Stack(
-              children: [
-                Container(
-                  height: 5,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20))),
-                ),
-                Container(
-                  height: 5,
-                  width: 150,
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20))),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 150),
-            child: Row(
-              children: [
-                Text("Calculator", style: GoogleFonts.inter(color: Colors.blueGrey.shade900),),
-                BottomSheetWidget(),
-              ],
-            )
-            // ConfirmationButtonWidget(),     // iptal oldu
-          ),
-         
-          
-          Padding(
-            padding: const EdgeInsets.only(right: 20,left: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("6 * 2 =", style: GoogleFonts.biryani(fontSize: 35),),
-                SizedBox(
-                  width: 15,
-                ),
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(width: 2, color: Colors.grey.shade300)
+          Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 7, left: 7),
+              child: Stack(
+                children: [
+                  Container(
+                    height: 5,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20))),
                   ),
-                )
-              ],
+                  Container(
+                    height: 5,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20))),
+                  )
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
-            child: Container(
-              height: 80,
-              width: 400,
-              decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(width: 2, color: Colors.grey.shade300)),
+            SizedBox(
+              height: 10,
             ),
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          CalGameGridViewWidget(),
-          
-          // GameOverAlertWidget(),      // Bunu stack içine alman gerekiyor.
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 150),
+              child: Row(
+                children: [
+                  Text("Calculator", style: GoogleFonts.inter(color: Colors.blueGrey.shade900),),
+                  BottomSheetWidget(),
+                ],
+              )
+              // ConfirmationButtonWidget(),     // iptal oldu
+            ),
+           
+            
+            Padding(
+              padding: const EdgeInsets.only(right: 20,left: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("6 * 2 =", style: GoogleFonts.biryani(fontSize: 35),),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(width: 2, color: Colors.grey.shade300)
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 20, left: 20),
+              child: Container(
+                height: 80,
+                width: 400,
+                decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(width: 2, color: Colors.grey.shade300)),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            CalGameGridViewWidget(),
+            
+            // GameOverAlertWidget(),      // Bunu stack içine alman gerekiyor.
+          ],
+        ),
+        GameOverAlertWidget(),
+        PauseAlertWidget(),
+        ], 
       ),
     );
   }
