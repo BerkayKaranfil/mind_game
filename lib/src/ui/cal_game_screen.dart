@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:icony/icony_ikonate.dart';
 import 'package:mind_game/deneme.dart';
 import 'package:mind_game/src/widgets/first_screen_widgets/navi_pop_button.dart';
+import 'package:mind_game/src/widgets/second_screen_widgets/bottom_sheet.dart';
+import 'package:mind_game/src/widgets/second_screen_widgets/calculate_gridview.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/confirmation_button.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/game_over_alert.dart';
 
@@ -20,7 +22,6 @@ class _CalculateGameState extends State<CalculateGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 228, 182, 182),
-      
       appBar: AppBar(
         toolbarHeight: 60,
         shape: RoundedRectangleBorder(
@@ -114,10 +115,36 @@ class _CalculateGameState extends State<CalculateGame> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 150),
-            child: ConfirmationButtonWidget(),
+            child: Row(
+              children: [
+                Text("Calculator", style: GoogleFonts.inter(color: Colors.blueGrey.shade900),),
+                BottomSheetWidget(),
+              ],
+            )
+            // ConfirmationButtonWidget(),     // iptal oldu
           ),
-          SizedBox(
-            height: 10,
+         
+          
+          Padding(
+            padding: const EdgeInsets.only(right: 20,left: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("6 * 2 =", style: GoogleFonts.biryani(fontSize: 35),),
+                SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(width: 2, color: Colors.grey.shade300)
+                  ),
+                )
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
@@ -131,46 +158,11 @@ class _CalculateGameState extends State<CalculateGame> {
             ),
           ),
           SizedBox(
-            height: 100,
+            height: 40,
           ),
-           /* Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
-            child: Container(
-              height: 516,
-              width: 400,
-              child: GridView.builder(
-                  itemCount: 12,
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      mainAxisExtent: 120,
-                      maxCrossAxisExtent: 120,
-                      childAspectRatio: 1),
-                  itemBuilder: ((context, index) {
-                    return Container(
-                      height: 20,
-                      width: 20,
-                      decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                            color: Color.fromARGB(255, 168, 45, 36),
-                            width: 2,
-                            strokeAlign: StrokeAlign.inside,
-                            style: BorderStyle.solid,
-                          ),
-                         /*  boxShadow: [
-                            BoxShadow(
-                                color: Colors.red,
-                                blurRadius: 0.4,
-                                spreadRadius: 0.4,
-                                offset: Offset(-2, -2)),
-                          ] */),
-                    );
-                  })),
-            ),
-          ),  */
-          GameOverAlertWidget()
+          CalGameGridViewWidget(),
+          
+          // GameOverAlertWidget(),      // Bunu stack içine alman gerekiyor.
         ],
       ),
     );
@@ -181,62 +173,3 @@ class _CalculateGameState extends State<CalculateGame> {
 
 
 
-/* body: Column(
-        children: [
-          SizedBox(
-            height: 200,
-          ),
-          Container(
-            height: 100,
-            width: 400,
-            decoration: BoxDecoration(
-                color: Color.fromARGB(255, 31, 39, 45),
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10))),
-            child: Padding(
-              padding: const EdgeInsets.only(right: 20, left: 20),
-              child: Row(
-                children: [
-                  FirstScreenNaviPopWidget(),
-                  Spacer(
-                    flex: 2,
-                  ),
-                  Ikonate(
-                    Ikonate.cup,
-                    color: Colors.yellow,
-                    height: 35,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "0",
-                    style: GoogleFonts.inter(fontSize: 30, color: Colors.white),
-                  ),
-                  Spacer(
-                    flex: 2,
-                  ),
-                  InkWell(
-                    onTap: (() {}),
-                    child: Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 71, 38, 35),
-                          border: Border.all(color: Colors.white, width: 1.5),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Center(
-                        child: Ikonate(
-                          Ikonate.arrow_right_circle,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ), */

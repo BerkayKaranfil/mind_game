@@ -9,7 +9,7 @@ class GameOverAlertWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-        visible: true,
+        visible: false,
         child: Container(
           height: 200,
           width: 300,

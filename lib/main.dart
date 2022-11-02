@@ -3,6 +3,7 @@ import 'package:mind_game/deneme.dart';
 import 'package:mind_game/src/ui/cal_game_screen.dart';
 import 'package:mind_game/src/ui/first_screen.dart';
 import 'package:mind_game/src/ui/homescreen.dart';
+import 'package:mind_game/src/widgets/second_screen_widgets/bottom_sheet.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/pause_alert.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: PauseAlertWidget(),
+      home: CalculateGame(),
     );
   }
 }
