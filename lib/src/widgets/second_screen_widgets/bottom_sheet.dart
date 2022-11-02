@@ -55,13 +55,13 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
               height: 5,
             ),
             Container(
-                height: 200,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                child: Image.asset(
-                  "assets/gifs/calculator-intro.gif",
-                  fit: BoxFit.cover,
-                )),
+              height: 200,
+              width: 350,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: DecorationImage(
+                      image: AssetImage("assets/gifs/calculator-intro.gif"))),
+            ),
             SizedBox(
               height: 5,
             ),

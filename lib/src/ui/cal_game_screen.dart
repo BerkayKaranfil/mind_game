@@ -87,54 +87,60 @@ class _CalculateGameState extends State<CalculateGame> {
       body: Stack(
         children: [
           Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 7, left: 7),
-              child: Stack(
-                children: [
-                  Container(
-                    height: 5,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20))),
-                  ),
-                  Container(
-                    height: 5,
-                    width: 150,
-                    decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20))),
-                  )
-                ],
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 7, left: 7),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 5,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20))),
+                    ),
+                    Container(
+                      height: 5,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20))),
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 150),
-              child: Row(
-                children: [
-                  Text("Calculator", style: GoogleFonts.inter(color: Colors.blueGrey.shade900),),
-                  BottomSheetWidget(),
-                ],
-              )
-              // ConfirmationButtonWidget(),     // iptal oldu
-            ),
-           
-            
-            Padding(
-              padding: const EdgeInsets.only(right: 20,left: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("6 * 2 =", style: GoogleFonts.biryani(fontSize: 35),),
-                  SizedBox(
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                  padding: const EdgeInsets.only(left: 150),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Calculator",
+                        style:
+                            GoogleFonts.inter(color: Colors.blueGrey.shade900),
+                      ),
+                      BottomSheetWidget(),
+                    ],
+                  )
+                  // ConfirmationButtonWidget(),     // iptal oldu
+                  ),
+
+              Padding(
+                padding: const EdgeInsets.only(right: 20, left: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "6 * 2",
+                      style: GoogleFonts.biryani(fontSize: 35),
+                    ),
+                    /* SizedBox(
                     width: 15,
                   ),
                   Container(
@@ -145,38 +151,34 @@ class _CalculateGameState extends State<CalculateGame> {
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(width: 2, color: Colors.grey.shade300)
                     ),
-                  )
-                ],
+                  ) */
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 20, left: 20),
-              child: Container(
-                height: 80,
-                width: 400,
-                decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(width: 2, color: Colors.grey.shade300)),
+              Padding(
+                padding: const EdgeInsets.only(right: 20, left: 20),
+                child: Container(
+                  height: 80,
+                  width: 400,
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(20),
+                      border:
+                          Border.all(width: 2, color: Colors.grey.shade300)),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            CalGameGridViewWidget(),
-            
-            // GameOverAlertWidget(),      // Bunu stack içine alman gerekiyor.
-          ],
-        ),
-        GameOverAlertWidget(),
-        PauseAlertWidget(),
-        ], 
+              SizedBox(
+                height: 40,
+              ),
+              CalGameGridViewWidget(),
+
+              // GameOverAlertWidget(),      // Bunu stack içine alman gerekiyor.
+            ],
+          ),
+          GameOverAlertWidget(),
+          PauseAlertWidget(),
+        ],
       ),
     );
   }
 }
-
-
-
-
-
