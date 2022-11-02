@@ -10,6 +10,7 @@ import 'package:mind_game/src/widgets/second_screen_widgets/calculate_gridview.d
 import 'package:mind_game/src/widgets/second_screen_widgets/confirmation_button.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/game_over_alert.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/pause_alert.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CalculateGame extends StatefulWidget {
   const CalculateGame({super.key});
@@ -88,7 +89,18 @@ class _CalculateGameState extends State<CalculateGame> {
         children: [
           Column(
             children: [
-              Padding(
+              LinearPercentIndicator(
+                width: 380,
+                lineHeight: 5,
+                percent: 0.4,
+                backgroundColor: Colors.white,
+                progressColor: Colors.greenAccent,
+                alignment: MainAxisAlignment.center,
+                //animationDuration: 2000,
+                //animation: true,
+                //curve: Curves.easeInQuad,
+              ),
+              /* Padding(
                 padding: const EdgeInsets.only(right: 7, left: 7),
                 child: Stack(
                   children: [
@@ -112,7 +124,7 @@ class _CalculateGameState extends State<CalculateGame> {
                     )
                   ],
                 ),
-              ),
+              ), */
               SizedBox(
                 height: 10,
               ),
