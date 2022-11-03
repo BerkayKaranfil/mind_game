@@ -92,12 +92,14 @@ class _CalculateGameState extends State<CalculateGame> {
               LinearPercentIndicator(
                 width: 380,
                 lineHeight: 5,
-                percent: 0.4,
-                backgroundColor: Colors.white,
-                progressColor: Colors.greenAccent,
+                percent: 0.7,
+                backgroundColor: Colors.greenAccent,
+                progressColor: Colors.redAccent,
                 alignment: MainAxisAlignment.center,
-                //animationDuration: 2000,
-                //animation: true,
+                animationDuration: 10000,
+                animation: true,
+
+                //onAnimationEnd: () {},
                 //curve: Curves.easeInQuad,
               ),
               /* Padding(

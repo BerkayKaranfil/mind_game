@@ -16,6 +16,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
     return GestureDetector(
       onTap: () {
         showModalBottomSheet(
+            backgroundColor: Colors.blueGrey.withOpacity(0.8),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(
               top: Radius.circular(20),
@@ -42,7 +43,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
         height: 500,
         width: double.infinity,
         decoration: BoxDecoration(
-            color: Colors.grey,
+            //  color: Colors.grey,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Column(

@@ -71,7 +71,7 @@ class FirstScreenMathPuzzleWidget extends StatelessWidget {
                 Ikonate(
                   Ikonate.cup,
                   height: 20,
-                  color: Colors.black,
+                  color: Colors.yellowAccent,
                 ),
                 SizedBox(
                   width: 5,
