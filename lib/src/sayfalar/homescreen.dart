@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icony/icony_gameicons.dart';
 import 'package:icony/icony_ikonate.dart';
-import 'package:mind_game/src/ui/first_screen.dart';
+import 'package:mind_game/src/sayfalar/first_screen.dart';
 import 'package:mind_game/src/widgets/dark_mode_button.dart';
 import 'package:mind_game/src/widgets/math_puzzle_oyunlari.dart';
 import 'package:mind_game/src/widgets/skor_kutusu.dart';

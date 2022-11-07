@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mind_game/src/ui/first_screen.dart';
+import 'package:mind_game/src/sayfalar/first_screen.dart';
 
 class MathPuzzleOyunlariWidget extends StatelessWidget {
   const MathPuzzleOyunlariWidget({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mind_game/deneme.dart';
-import 'package:mind_game/src/ui/cal_game_screen.dart';
-import 'package:mind_game/src/ui/first_screen.dart';
-import 'package:mind_game/src/ui/homescreen.dart';
+import 'package:mind_game/src/sayfalar/cal_game_screen.dart';
+import 'package:mind_game/src/sayfalar/first_screen.dart';
+import 'package:mind_game/src/sayfalar/homescreen.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/bottom_sheet.dart';
 import 'package:mind_game/src/widgets/second_screen_widgets/pause_alert.dart';
 

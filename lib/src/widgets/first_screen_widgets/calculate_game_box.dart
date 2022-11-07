@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icony/icony_ikonate.dart';
-import 'package:mind_game/src/ui/cal_game_screen.dart';
+import 'package:mind_game/src/sayfalar/cal_game_screen.dart';
 
 class FirstScreenMathPuzzleWidget extends StatelessWidget {
   const FirstScreenMathPuzzleWidget({
